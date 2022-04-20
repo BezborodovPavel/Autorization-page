@@ -135,7 +135,6 @@
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutButtonPress" destination="vds-aH-0sU" eventType="touchUpInside" id="13b-5a-k14"/>
                                     <segue destination="1Nz-9e-iQl" kind="unwind" unwindAction="unwindFor:" id="54v-uI-VMH"/>
                                 </connections>
                             </button>
