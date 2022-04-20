@@ -12,8 +12,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    private let userName = "User"
-    private let password = "123" //Вот за такое хранение паролей,точно уволили бы сразу :)
+    private let userName = "user"
+    private let password = "123" //Вот за такое хранение паролей в коде,точно уволили бы сразу :)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        return false
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        welcomeVC.userName = userName
+    }
     
     @IBAction func forgotNameButton() {
         showAlert(title: "OOOps!", message: "You name is \(userName)", titleButton: "Thanks")
@@ -38,9 +39,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         showAlert(title: "OOOps!", message: "You password is \(password)", titleButton: "Thanks")
     }
     
-    //    @IBAction func logInButtonPressed() {
-    //        logIn()
-    //    }
+    @IBAction func logInButtonPressed() {
+        logIn()
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let loginVC = segue.destination as? LoginViewController else {return}
+        
+        loginVC.userNameField.text = ""
+        loginVC.passwordField.text = ""
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == userNameField {
@@ -73,7 +82,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                       titleButton: "Ok")
             return
         }
-                
+               
+        performSegue(withIdentifier: "seguesToWelcome", sender: nil)
     }
 }
 

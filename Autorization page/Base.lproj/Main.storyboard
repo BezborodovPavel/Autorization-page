@@ -48,8 +48,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="buQ-4g-8RM"/>
-                                            <segue destination="8wl-lz-0d6" kind="show" id="w0N-MQ-Ozg"/>
+                                            <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0q7-EU-56Y"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ABR-2t-taW">
@@ -107,6 +106,7 @@
                     <connections>
                         <outlet property="passwordField" destination="7qB-rI-SLz" id="qeg-BV-Dg9"/>
                         <outlet property="userNameField" destination="R5X-BH-4xF" id="YJg-Rz-fIi"/>
+                        <segue destination="vds-aH-0sU" kind="show" identifier="seguesToWelcome" id="3BW-gr-l2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,17 +118,17 @@
             <objects>
                 <viewController id="vds-aH-0sU" customClass="WelcomeViewController" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pe8-ZY-rOB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-id-JwH">
-                                <rect key="frame" x="166" y="183" width="82" height="39"/>
+                                <rect key="frame" x="166" y="139" width="82" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rja-1t-MIa">
-                                <rect key="frame" x="176" y="431.5" width="62" height="33"/>
+                                <rect key="frame" x="176" y="404.5" width="62" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
@@ -136,10 +136,11 @@
                                 </state>
                                 <connections>
                                     <action selector="logOutButtonPress" destination="vds-aH-0sU" eventType="touchUpInside" id="13b-5a-k14"/>
+                                    <segue destination="1Nz-9e-iQl" kind="unwind" unwindAction="unwindFor:" id="54v-uI-VMH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7J-6p-0HW">
-                                <rect key="frame" x="180" y="222.5" width="54" height="60"/>
+                                <rect key="frame" x="180" y="178.5" width="54" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,32 +158,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JSF-7P-HZ8"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="WYf-id-JwH" id="myn-u9-gz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSL-iS-4Fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1Nz-9e-iQl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="833" y="94"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="iCp-Lh-bKt">
-            <objects>
-                <viewController id="8wl-lz-0d6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ai6-b6-bmy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OiG-qN-YJS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nT4-yJ-OnC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mcD-pA-w00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1561" y="94"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

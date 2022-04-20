@@ -8,11 +8,14 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var greetingLabel: UILabel!
+    
+    var userName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        greetingLabel.text = "Welcome \(userName)"
     }
     
     @IBAction func logOutButtonPress() {
