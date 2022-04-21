@@ -44,18 +44,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let loginVC = segue.destination as? LoginViewController else {return}
-        
-        loginVC.userNameField.text = ""
-        loginVC.passwordField.text = ""
+        userNameField.text = ""
+        passwordField.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == userNameField {
             passwordField.becomeFirstResponder()
-        }else if textField == passwordField {
-            passwordField.resignFirstResponder()
+        }else {
             logIn()
         }
         
