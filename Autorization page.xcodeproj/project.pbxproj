@@ -42,6 +42,8 @@
 		E15A760328100F9000C66C2E = {
 			isa = PBXGroup;
 			children = (
+				E15A761528100F9000C66C2E /* Main.storyboard */,
+				E15A761A28100F9400C66C2E /* LaunchScreen.storyboard */,
 				E15A760E28100F9000C66C2E /* Autorization page */,
 				E15A760D28100F9000C66C2E /* Products */,
 			);
@@ -58,16 +60,54 @@
 		E15A760E28100F9000C66C2E /* Autorization page */ = {
 			isa = PBXGroup;
 			children = (
-				E15A760F28100F9000C66C2E /* AppDelegate.swift */,
-				E15A761128100F9000C66C2E /* SceneDelegate.swift */,
-				E15A761328100F9000C66C2E /* LoginViewController.swift */,
-				E15A7623281026D300C66C2E /* WelcomeViewController.swift */,
-				E15A761528100F9000C66C2E /* Main.storyboard */,
-				E15A761828100F9400C66C2E /* Assets.xcassets */,
-				E15A761A28100F9400C66C2E /* LaunchScreen.storyboard */,
-				E15A761D28100F9400C66C2E /* Info.plist */,
+				E15A76292814116000C66C2E /* Models */,
+				E15A76252814104700C66C2E /* ViewControllers */,
+				E15A7627281410AB00C66C2E /* Storyboards */,
+				E15A76262814106D00C66C2E /* App */,
+				E15A7628281410C500C66C2E /* Resourses */,
 			);
 			path = "Autorization page";
+			sourceTree = "<group>";
+		};
+		E15A76252814104700C66C2E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E15A7623281026D300C66C2E /* WelcomeViewController.swift */,
+				E15A761328100F9000C66C2E /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E15A76262814106D00C66C2E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E15A761D28100F9400C66C2E /* Info.plist */,
+				E15A761128100F9000C66C2E /* SceneDelegate.swift */,
+				E15A760F28100F9000C66C2E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E15A7627281410AB00C66C2E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E15A7628281410C500C66C2E /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				E15A761828100F9400C66C2E /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		E15A76292814116000C66C2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HRYLC3C7SK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Autorization page/Info.plist";
+				INFOPLIST_FILE = "Autorization page/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Authorization page";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -325,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HRYLC3C7SK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Autorization page/Info.plist";
+				INFOPLIST_FILE = "Autorization page/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Authorization page";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
