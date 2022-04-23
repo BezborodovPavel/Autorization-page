@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E124F7B1281418F500384BBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124F7B0281418F500384BBA /* User.swift */; };
+		E124F7B32814222E00384BBA /* FirstInfoPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124F7B22814222E00384BBA /* FirstInfoPageVC.swift */; };
+		E124F7B52814253E00384BBA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124F7B42814253E00384BBA /* TabBarViewController.swift */; };
+		E124F7B728142BC700384BBA /* SecondInfoPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124F7B628142BC700384BBA /* SecondInfoPageVC.swift */; };
 		E15A761028100F9000C66C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A760F28100F9000C66C2E /* AppDelegate.swift */; };
 		E15A761228100F9000C66C2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A761128100F9000C66C2E /* SceneDelegate.swift */; };
 		E15A761428100F9000C66C2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A761328100F9000C66C2E /* LoginViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E124F7B0281418F500384BBA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E124F7B22814222E00384BBA /* FirstInfoPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInfoPageVC.swift; sourceTree = "<group>"; };
+		E124F7B42814253E00384BBA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E124F7B628142BC700384BBA /* SecondInfoPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInfoPageVC.swift; sourceTree = "<group>"; };
 		E15A760C28100F9000C66C2E /* Autorization page.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autorization page.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15A760F28100F9000C66C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15A761128100F9000C66C2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +50,6 @@
 		E15A760328100F9000C66C2E = {
 			isa = PBXGroup;
 			children = (
-				E15A761528100F9000C66C2E /* Main.storyboard */,
-				E15A761A28100F9400C66C2E /* LaunchScreen.storyboard */,
 				E15A760E28100F9000C66C2E /* Autorization page */,
 				E15A760D28100F9000C66C2E /* Products */,
 			);
@@ -73,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				E15A7623281026D300C66C2E /* WelcomeViewController.swift */,
+				E124F7B42814253E00384BBA /* TabBarViewController.swift */,
+				E124F7B628142BC700384BBA /* SecondInfoPageVC.swift */,
+				E124F7B22814222E00384BBA /* FirstInfoPageVC.swift */,
 				E15A761328100F9000C66C2E /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
@@ -91,6 +100,8 @@
 		E15A7627281410AB00C66C2E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E15A761528100F9000C66C2E /* Main.storyboard */,
+				E15A761A28100F9400C66C2E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 		E15A76292814116000C66C2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E124F7B0281418F500384BBA /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,8 +195,12 @@
 			files = (
 				E15A761428100F9000C66C2E /* LoginViewController.swift in Sources */,
 				E15A7624281026D300C66C2E /* WelcomeViewController.swift in Sources */,
+				E124F7B32814222E00384BBA /* FirstInfoPageVC.swift in Sources */,
 				E15A761028100F9000C66C2E /* AppDelegate.swift in Sources */,
+				E124F7B52814253E00384BBA /* TabBarViewController.swift in Sources */,
+				E124F7B1281418F500384BBA /* User.swift in Sources */,
 				E15A761228100F9000C66C2E /* SceneDelegate.swift in Sources */,
+				E124F7B728142BC700384BBA /* SecondInfoPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    private let userName = "user"
-    private let password = "123" //Вот за такое хранение паролей в коде,точно уволили бы сразу :)
+    let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +26,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.userName = userName
+        
+        guard let tabController = segue.destination as? TabBarViewController, let viewControllers = tabController.viewControllers else {return}
+        
+        tabController.user = user
+        
+        for controllerFromTab in viewControllers {
+            if let welcomeVC = controllerFromTab as? WelcomeViewController {
+                welcomeVC.userName = tabController.user.userName
+            }
+        }
+        
     }
     
     @IBAction func forgotNameButton() {
-        showAlert(title: "OOOps!", message: "You name is \(userName)", titleButton: "Thanks")
+        showAlert(title: "OOOps!", message: "You name is \(user.userName)", titleButton: "Thanks")
     }
     
     @IBAction func forgotPasswordButton() {
-        showAlert(title: "OOOps!", message: "You password is \(password)", titleButton: "Thanks")
+        showAlert(title: "OOOps!", message: "You password is \(user.password)", titleButton: "Thanks")
     }
     
     @IBAction func logInButtonPressed() {
@@ -73,7 +81,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let enteredUserName = userNameField.text ?? ""
         let enteredPassword = passwordField.text ?? ""
         
-        if enteredUserName != userName || enteredPassword != password {
+        if enteredUserName != user.userName || enteredPassword != user.password {
             showAlert(title: "Invalid login or password",
                       message: "Please enter correct login and password",
                       titleButton: "Ok")

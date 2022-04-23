@@ -17,4 +17,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         greetingLabel.text = "Welcome \(userName)"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("!")
+    }
 }

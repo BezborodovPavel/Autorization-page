@@ -106,14 +106,14 @@
                     <connections>
                         <outlet property="passwordField" destination="7qB-rI-SLz" id="qeg-BV-Dg9"/>
                         <outlet property="userNameField" destination="R5X-BH-4xF" id="YJg-Rz-fIi"/>
-                        <segue destination="vds-aH-0sU" kind="presentation" identifier="seguesToWelcome" modalPresentationStyle="fullScreen" id="3BW-gr-l2T"/>
+                        <segue destination="a7h-dw-VU9" kind="presentation" identifier="seguesToWelcome" modalPresentationStyle="fullScreen" id="3BW-gr-l2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.75" y="93.75"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="Tmb-Uj-FJA">
             <objects>
                 <viewController id="vds-aH-0sU" customClass="WelcomeViewController" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,6 +156,7 @@
                             <constraint firstItem="k7J-6p-0HW" firstAttribute="centerX" secondItem="Pe8-ZY-rOB" secondAttribute="centerX" id="xRh-5T-uEx"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="person.crop.square" catalog="system" id="peX-pN-rBb"/>
                     <navigationItem key="navigationItem" id="JSF-7P-HZ8"/>
                     <connections>
                         <outlet property="greetingLabel" destination="WYf-id-JwH" id="myn-u9-gz7"/>
@@ -164,10 +165,143 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSL-iS-4Fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1Nz-9e-iQl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="833" y="94"/>
+            <point key="canvasLocation" x="1555" y="94"/>
+        </scene>
+        <!--First Info PageVC-->
+        <scene sceneID="7Jt-Fq-Xln">
+            <objects>
+                <viewController id="wra-yY-RZc" customClass="FirstInfoPageVC" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZ7-BL-A88">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="U6R-Nx-Ghx">
+                                <rect key="frame" x="162" y="416.5" width="90" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSL-rP-ocs">
+                                        <rect key="frame" x="26.5" y="0.0" width="37" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profession:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-9w-10f">
+                                        <rect key="frame" x="0.0" y="42" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ztf-ff-nv1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U6R-Nx-Ghx" firstAttribute="centerY" secondItem="sZ7-BL-A88" secondAttribute="centerY" id="nB3-C0-jXp"/>
+                            <constraint firstItem="U6R-Nx-Ghx" firstAttribute="centerX" secondItem="sZ7-BL-A88" secondAttribute="centerX" id="nBJ-cc-rdk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EgE-E3-wvS">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="a0D-OF-NH0">
+                            <connections>
+                                <segue destination="cV7-zm-8bI" kind="presentation" modalPresentationStyle="overCurrentContext" id="aZd-rW-SYD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="VSL-rP-ocs" id="vwu-n6-EwC"/>
+                        <outlet property="proffLabel" destination="dXd-9w-10f" id="D9S-gB-6JR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPt-tj-Oy5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3130" y="94"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="2ym-Im-dtk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7h-dw-VU9" customClass="TabBarViewController" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jrh-rm-mAJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vds-aH-0sU" kind="relationship" relationship="viewControllers" id="hbP-7P-ONY"/>
+                        <segue destination="RhX-iz-nZC" kind="relationship" relationship="viewControllers" id="ZeQ-R7-ZTc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKw-A6-EwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="94"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="0Hf-fw-QrT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RhX-iz-nZC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info.circle" catalog="system" id="yEn-3e-0Uo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZHL-cc-aGj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wra-yY-RZc" kind="relationship" relationship="rootViewController" id="MKp-5O-EWO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfC-oF-uje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334.7826086956525" y="93.75"/>
+        </scene>
+        <!--Second Info PageVC-->
+        <scene sceneID="Sxw-bf-OGf">
+            <objects>
+                <viewController id="cV7-zm-8bI" customClass="SecondInfoPageVC" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="866-qZ-EZg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-JL-xja">
+                                <rect key="frame" x="177" y="416.5" width="60.5" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heigth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-DW-hzn">
+                                        <rect key="frame" x="1" y="0.0" width="58" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weigth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snV-e9-7DS">
+                                        <rect key="frame" x="0.0" y="42" width="60.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="csl-Kl-c4S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZg-JL-xja" firstAttribute="centerY" secondItem="866-qZ-EZg" secondAttribute="centerY" id="D6B-mY-B4p"/>
+                            <constraint firstItem="eZg-JL-xja" firstAttribute="centerX" secondItem="866-qZ-EZg" secondAttribute="centerX" id="mU1-Bw-4ap"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hegthLabel" destination="y0O-DW-hzn" id="g3z-kZ-rjg"/>
+                        <outlet property="weigthLabel" destination="snV-e9-7DS" id="QCJ-Fo-eNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSd-Gf-4qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3909" y="94"/>
         </scene>
     </scenes>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
