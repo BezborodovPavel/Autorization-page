@@ -156,7 +156,7 @@
                             <constraint firstItem="k7J-6p-0HW" firstAttribute="centerX" secondItem="Pe8-ZY-rOB" secondAttribute="centerX" id="xRh-5T-uEx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="person.crop.square" catalog="system" id="peX-pN-rBb"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="peX-pN-rBb"/>
                     <navigationItem key="navigationItem" id="JSF-7P-HZ8"/>
                     <connections>
                         <outlet property="greetingLabel" destination="WYf-id-JwH" id="myn-u9-gz7"/>
@@ -165,7 +165,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSL-iS-4Fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1Nz-9e-iQl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1555" y="94"/>
+            <point key="canvasLocation" x="396" y="869"/>
         </scene>
         <!--First Info PageVC-->
         <scene sceneID="7Jt-Fq-Xln">
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPt-tj-Oy5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130" y="94"/>
+            <point key="canvasLocation" x="2029" y="869"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="2ym-Im-dtk">
@@ -222,6 +222,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7h-dw-VU9" customClass="TabBarViewController" customModule="Autorization_page" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jrh-rm-mAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -238,7 +239,7 @@
         <scene sceneID="0Hf-fw-QrT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RhX-iz-nZC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info.circle" catalog="system" id="yEn-3e-0Uo"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="yEn-3e-0Uo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZHL-cc-aGj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -251,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfC-oF-uje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334.7826086956525" y="93.75"/>
+            <point key="canvasLocation" x="1164" y="869"/>
         </scene>
         <!--Second Info PageVC-->
         <scene sceneID="Sxw-bf-OGf">
@@ -293,12 +294,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSd-Gf-4qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3909" y="94"/>
+            <point key="canvasLocation" x="2864" y="869"/>
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

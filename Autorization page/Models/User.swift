@@ -15,8 +15,6 @@ struct User {
     let professions: String
     let heigth: String
     let weigth: String
-    let favoriteColor: String
-    let favoriteAnimal: String
     
     static func getUser() -> User {
         User(
@@ -25,8 +23,6 @@ struct User {
             age: "41",
             professions: "developer",
             heigth: "172",
-            weigth: "88",
-            favoriteColor: "Blue",
-            favoriteAnimal: "Cat")
-    }
+            weigth: "88"
+        )}
 }

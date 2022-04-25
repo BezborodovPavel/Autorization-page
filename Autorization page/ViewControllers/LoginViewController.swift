@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    let user = User.getUser()
+    private let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             logIn()
         }
         
-        return true // не уверен что так правильно возвращать всегда true, но надо же что-то вернуть
+        return true
     }
     
     private func showAlert(title: String, message: String, titleButton: String) {
