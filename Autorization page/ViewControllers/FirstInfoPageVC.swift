@@ -18,7 +18,7 @@ class FirstInfoPageVC: UIViewController {
         super.viewDidLoad()
         
         ageLabel.text = "Age: \(parentTabBar.user.age)"
-        proffLabel.text = "Profession \(parentTabBar.user.age)"
+        proffLabel.text = "Profession \(parentTabBar.user.professions)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

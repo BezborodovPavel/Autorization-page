@@ -11,10 +11,11 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var greetingLabel: UILabel!
     
-    var userName = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = "Welcome \(userName)"
+        
+        if let tabBar = tabBarController as? TabBarViewController {
+            greetingLabel.text = "Welcome \(tabBar.user.name)"
+        }
     }
 }

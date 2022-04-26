@@ -27,20 +27,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let tabController = segue.destination as? TabBarViewController, let viewControllers = tabController.viewControllers else {return}
-        
+        guard let tabController = segue.destination as? TabBarViewController else {return}        
         tabController.user = user
-        
-        for controllerFromTab in viewControllers {
-            if let welcomeVC = controllerFromTab as? WelcomeViewController {
-                welcomeVC.userName = tabController.user.userName
-            }
-        }
         
     }
     
     @IBAction func forgotNameButton() {
-        showAlert(title: "OOOps!", message: "You name is \(user.userName)", titleButton: "Thanks")
+        showAlert(title: "OOOps!", message: "You name is \(user.name)", titleButton: "Thanks")
     }
     
     @IBAction func forgotPasswordButton() {
@@ -81,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let enteredUserName = userNameField.text ?? ""
         let enteredPassword = passwordField.text ?? ""
         
-        if enteredUserName != user.userName || enteredPassword != user.password {
+        if enteredUserName != user.name || enteredPassword != user.password {
             showAlert(title: "Invalid login or password",
                       message: "Please enter correct login and password",
                       titleButton: "Ok")

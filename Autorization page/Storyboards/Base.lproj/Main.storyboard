@@ -203,7 +203,7 @@
                     <navigationItem key="navigationItem" id="EgE-E3-wvS">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="a0D-OF-NH0">
                             <connections>
-                                <segue destination="cV7-zm-8bI" kind="presentation" modalPresentationStyle="overCurrentContext" id="aZd-rW-SYD"/>
+                                <segue destination="cV7-zm-8bI" kind="show" id="aZd-rW-SYD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -287,6 +287,7 @@
                             <constraint firstItem="eZg-JL-xja" firstAttribute="centerX" secondItem="866-qZ-EZg" secondAttribute="centerX" id="mU1-Bw-4ap"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Kwp-oT-6lf"/>
                     <connections>
                         <outlet property="hegthLabel" destination="y0O-DW-hzn" id="g3z-kZ-rjg"/>
                         <outlet property="weigthLabel" destination="snV-e9-7DS" id="QCJ-Fo-eNu"/>

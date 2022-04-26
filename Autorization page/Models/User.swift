@@ -9,7 +9,7 @@ import Foundation
 
 struct User {
     
-    let userName: String
+    let name: String
     let password: String
     let age: String
     let professions: String
@@ -18,7 +18,7 @@ struct User {
     
     static func getUser() -> User {
         User(
-            userName: "Pavel",
+            name: "Pavel",
             password: "123",
             age: "41",
             professions: "developer",
